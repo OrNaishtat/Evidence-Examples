@@ -38,7 +38,7 @@ jobs:
       - name: Build Docker image
         run: |
           URL=$(echo ${{ vars.ARTIFACTORY_URL }} | sed 's|^https://||')
-          REPO_URL=${URL}'/frogachamps-example'
+          REPO_URL=${URL}'/frogachamps-example-virtual/'
           echo "REPO_URL=${REPO_URL}"
           echo "REPO_URL=${REPO_URL}"
           echo "REPO_URL=${REPO_URL}"
