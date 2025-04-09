@@ -1,8 +1,8 @@
-ARG REPO_URL=https://tsmemea.jfrog.io/artifactory/frogachamps-example-virtual
+ARG REPO_URL=tsmemea.jfrog.io/artifactory/frogachamps-example-virtual
 
 
 # Stage 1: Build the Go application
-FROM https://tsmemea.jfrog.io/artifactory/frogachamps-example-virtual/golang:1.23.3-alpine AS builder
+FROM tsmemea.jfrog.io/artifactory/frogachamps-example-virtual/golang:1.23.3-alpine AS builder
 
 # Set the working directory
 WORKDIR /app
@@ -20,7 +20,7 @@ COPY . .
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=${TARGETARCH} go build -o go-server .
 
 # Stage 2: Create the final image
-FROM https://tsmemea.jfrog.io/artifactory/frogachamps-example-virtual/alpine:latest
+FROM tsmemea.jfrog.io/artifactory/frogachamps-example-virtual/alpine:latest
 
 # Set the working directory
 WORKDIR /app
