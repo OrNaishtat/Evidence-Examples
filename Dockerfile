@@ -1,4 +1,4 @@
-ARG REPO_URL=tsmemea.jfrog.io/artifactory/frogachamps-example-virtual
+ARG REPO_URL
 
 
 # Stage 1: Build the Go application
